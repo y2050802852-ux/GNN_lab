@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+
+# macOS and IDE files
+.DS_Store
+.idea/
+.vscode/
+
+# Training outputs and checkpoints
+runs/
+*.pt
+*.pth
+*.ckpt
+*.log
+
+# Downloaded datasets
+data/
+datasets/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/

@@ -1,0 +1,33 @@
+# config/gcn_citegraph.yaml 一个实验一个文件，进版本库
+task: node # node\graph\edge
+model: sage  # gcn/sage/gin/linkpredgcn
+load_model_path: /Users/imac/codes/GNN_learn/gnn_project/runs/GNN_out_log/Train/Training_Result_node_sage_cora_20261017_223737/sage_best.pt
+hidden: 256 # graph:recommend 128/256
+dropout: 0.5
+epochs: 300
+seed: 42
+earlystop: true
+patience: 20
+sched:
+  enable: true
+  step_size: 20
+  gamma: 0.5
+
+optimizer_name: Adam # get optimizer name
+lr : 0.001
+weight_decay: 5e-4
+
+log: 
+  out_dir: runs/GNN_out_log
+  tensorboard: true
+randomseed: 0
+npseed: 0
+torchseed: 0
+
+
+dataset: 'cora'
+batch_size: 128   # graph: recommand 256/512 |
+num_neighbors: [25, 15]  # if SAGE
+data: 
+  homophily: 0.6
+  train_per_class: 20

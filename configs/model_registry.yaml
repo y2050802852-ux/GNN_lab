@@ -1,0 +1,22 @@
+# 模型注册表
+models:
+  gcn:
+    class: GCN
+    tasks:
+      - node
+
+  sage:
+    class: SAGE
+    tasks:
+      - node
+
+  gin:
+    class: GIN
+    tasks:
+      - node
+      - graph
+
+  linkpredgcn:
+    class: LinkPredGCN
+    tasks:
+      - edge
